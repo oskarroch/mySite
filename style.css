@@ -82,3 +82,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2f2f31;
 }
+
+.chosen {
+  border-bottom: 1px solid white;
+}
+
+#abtMe,
+#featuredWork,
+#xp,
+#interests {
+  text-align: right;
+}
