@@ -3,11 +3,11 @@ $("#contactMe").on("click", () => {
   window.location.href = link;
 });
 
-const lis = $("#abtMe, #featuredWork, #xp, #interests");
-lis.on("click", (e) => {
+const lis = $("#abtMeDot, #featuredWorkDot, #xpDot, #interestsDot");
+$("#abtMe, #featuredWork, #xp, #interests").on("click", (e) => {
   const idClicked = e.target.id;
   for (i = 0; i < lis.length; i++) {
     $(lis[i]).removeClass("chosen");
   }
-  $("#" + idClicked).addClass("chosen");
+  $("#" + idClicked + "Dot").addClass("chosen");
 });
