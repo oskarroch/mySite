@@ -84,7 +84,10 @@ body {
 }
 
 .chosen {
-  border-bottom: 1px solid white;
+  border: 2px solid #d0b8a8;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 50%;
 }
 
 #abtMe,
