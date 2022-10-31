@@ -10,7 +10,7 @@ body {
 
 ul li {
   list-style-type: none;
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 65px;
 }
 
@@ -83,17 +83,27 @@ body {
   background: #2f2f31;
 }
 
-.chosen {
-  outline: 2px solid #d0b8a8;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  border-radius: 50%;
-}
-
 #abtMe,
 #featuredWork,
 #xp,
 #interests {
   text-align: right;
+}
+
+#abtMeDot,
+#featuredWorkDot,
+#xpDot,
+#interestsDot {
+  position: relative;
+  left: 5px;
+}
+
+#circle {
+  position: absolute;
+  border: 2px solid #d0b8a8;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  right: 23px;
+  top: 51px;
 }

@@ -7,11 +7,18 @@ $("#contactMe").on("click", () => {
   window.location.href = link;
 });
 
-const lis = $("#abtMeDot, #featuredWorkDot, #xpDot, #interestsDot");
-$("#abtMe, #featuredWork, #xp, #interests").on("click", (e) => {
-  const idClicked = e.target.id;
-  for (i = 0; i < lis.length; i++) {
-    $(lis[i]).removeClass("chosen");
-  }
-  $("#" + idClicked + "Dot").addClass("chosen");
+$("#abtMe").on("click", () => {
+  $("#circle").animate({ top: "51px" });
+});
+
+$("#featuredWork").on("click", () => {
+  $("#circle").animate({ top: "134px" });
+});
+
+$("#xp").on("click", () => {
+  $("#circle").animate({ top: "217px" });
+});
+
+$("#interests").on("click", () => {
+  $("#circle").animate({ top: "300px" });
 });
