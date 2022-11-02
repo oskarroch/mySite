@@ -3,6 +3,22 @@ $("#contactMe").on("click", () => {
   window.location.href = link;
 });
 
+$("#abtMe").on("click", () => {
+  $("#circle").animate({ top: "54px" }, 1000);
+});
+
+$("#featuredWork").on("click", () => {
+  $("#circle").animate({ top: "140px" }, 1000);
+});
+
+$("#xp").on("click", () => {
+  $("#circle").animate({ top: "226px" }, 1000);
+});
+
+$("#interests").on("click", () => {
+  $("#circle").animate({ top: "312px" }, 1000);
+});
+
 $(window).on("load resize", function () {
   if ($(window).width() < 750) {
     $(".abtMe, .featuredWork, .xp, .interests").text("");
