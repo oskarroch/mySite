@@ -7,7 +7,7 @@ $("#abtMe").on("click", () => {
   $("#circle").animate({ top: "54px" }, 1000);
 });
 
-$("#featuredWork").on("click", () => {
+$("#interests").on("click", () => {
   $("#circle").animate({ top: "140px" }, 1000);
 });
 
@@ -15,8 +15,9 @@ $("#xp").on("click", () => {
   $("#circle").animate({ top: "226px" }, 1000);
 });
 
-$("#interests").on("click", () => {
+$("#featuredWork").on("click", () => {
   $("#circle").animate({ top: "312px" }, 1000);
+  $("#myWork").animate({ top: "35%" }, 1000);
 });
 
 $(window).on("load resize", function () {
@@ -32,4 +33,9 @@ $(window).on("load resize", function () {
     $(".dot").css({ left: "180px" });
     $("#circle").css({ right: "13px" });
   }
+});
+
+$("#arrow").on("click", () => {
+  $("#myWork").animate({ top: "110%" }, 1000);
+  $("#circle").animate({ top: "54px" }, 1000);
 });
