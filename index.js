@@ -20,7 +20,11 @@ $("#featuredWork").on("click", () => {
   $("#myWork").animate({ top: "35%" }, 1000);
 });
 
-$(window).on("load resize", function () {
+$(window).on("load", () => {
+  $(".cover").fadeOut(0);
+});
+
+$(window).on("load resize", () => {
   if ($(window).width() < 750) {
     $(".abtMe, .featuredWork, .xp, .interests").text("");
     $(".dot").css({ left: "10px" });
@@ -35,7 +39,23 @@ $(window).on("load resize", function () {
   }
 });
 
-$("#arrow").on("click", () => {
+$("#trapezoid").on("click", () => {
   $("#myWork").animate({ top: "110%" }, 1000);
   $("#circle").animate({ top: "54px" }, 1000);
 });
+
+$("#rockPaperScissors")
+  .on("mouseenter", () => {
+    $(".rps").fadeIn(200);
+  })
+  .on("mouseleave", () => {
+    $(".rps").fadeOut(200);
+  });
+
+$("#simonSays")
+  .on("mouseenter", () => {
+    $(".ss").fadeIn(200);
+  })
+  .on("mouseleave", () => {
+    $(".ss").fadeOut(200);
+  });
