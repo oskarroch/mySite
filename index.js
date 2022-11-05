@@ -50,7 +50,8 @@ $("#rockPaperScissors")
   })
   .on("mouseleave", () => {
     $(".rps").fadeOut(200);
-  });
+  })
+  .on('click', () => {});
 
 $("#simonSays")
   .on("mouseenter", () => {
