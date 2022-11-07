@@ -51,7 +51,7 @@ $("#rockPaperScissors")
   .on("mouseleave", () => {
     $(".rps").fadeOut(200);
   })
-  .on('click', () => {});
+  .on("click", () => {});
 
 $("#simonSays")
   .on("mouseenter", () => {
@@ -59,4 +59,12 @@ $("#simonSays")
   })
   .on("mouseleave", () => {
     $(".ss").fadeOut(200);
+  });
+
+$("#keeperApp")
+  .on("mouseenter", () => {
+    $(".ka").fadeIn(200);
+  })
+  .on("mouseleave", () => {
+    $(".ka").fadeOut(200);
   });
