@@ -1,7 +1,4 @@
-$("#contactMe").on("click", () => {
-  var link = "mailto:oskarrochowiak@gmail.com";
-  window.location.href = link;
-});
+let chosen = "aboutMe";
 
 $("#abtMe").on("click", () => {
   $("#circle").animate({ top: "54px" }, 1000);
@@ -9,6 +6,7 @@ $("#abtMe").on("click", () => {
 
 $("#interests").on("click", () => {
   $("#circle").animate({ top: "140px" }, 1000);
+  chosen === "aboutMe" ? null : null;
 });
 
 $("#xp").on("click", () => {
@@ -20,11 +18,8 @@ $("#featuredWork").on("click", () => {
   $("#myWork").animate({ top: "35%" }, 1000);
 });
 
-$(window).on("load", () => {
-  $(".cover").fadeOut(0);
-});
-
 $(window).on("load resize", () => {
+  $(".cover").fadeOut(0);
   if ($(window).width() < 750) {
     $(".abtMe, .featuredWork, .xp, .interests").text("");
     $(".dot").css({ left: "10px" });
@@ -51,7 +46,9 @@ $("#rockPaperScissors")
   .on("mouseleave", () => {
     $(".rps").fadeOut(200);
   })
-  .on("click", () => {});
+  .on("click", () => {
+    window.open("https://oskarroch.github.io/rockPaperScissors/");
+  });
 
 $("#simonSays")
   .on("mouseenter", () => {
@@ -59,6 +56,9 @@ $("#simonSays")
   })
   .on("mouseleave", () => {
     $(".ss").fadeOut(200);
+  })
+  .on("click", () => {
+    window.open("https://oskarroch.github.io/simonSays/");
   });
 
 $("#keeperApp")
