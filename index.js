@@ -2,18 +2,33 @@ let chosen = "aboutMe";
 
 $("#abtMe").on("click", () => {
   $("#circle").animate({ top: "54px" }, 1000);
+  setTimeout(() => {
+    $("#firstH").text("Hi, my name is Oskar - A Full-stack");
+    $("#secondH").text("web developer from poland");
+    $("#text").text("wafwafawfa");
+  }, 915);
   slideDown();
   chosen = "aboutMe";
 });
 
 $("#interests").on("click", () => {
   $("#circle").animate({ top: "140px" }, 1000);
+  setTimeout(() => {
+    $("#firstH").text("feageagae");
+    $("#secondH").text("geageagaegae");
+    $("#text").text("geagaegeag");
+  }, 915);
   chosen === "aboutMe" ? slideUp() : slideDown();
   chosen = "interests";
 });
 
 $("#xp").on("click", () => {
   $("#circle").animate({ top: "226px" }, 1000);
+  setTimeout(() => {
+    $("#firstH").text("dagegeag");
+    $("#secondH").text("awgragaeegfeagea");
+    $("#text").text("geageageaga");
+  }, 915);
   slideUp();
   chosen = "xp";
 });
@@ -44,7 +59,11 @@ $(window).on("load resize", () => {
 $("#trapezoid").on("click", () => {
   $("#myWork").animate({ top: "110%" }, 1000);
   $("#circle").animate({ top: "54px" }, 1000);
+  $("#firstH").text("Hi, my name is Oskar - A Full-stack");
+  $("#secondH").text("web developer from poland");
+  $("#text").text("wafwafawfa");
   unHide();
+  chosen = "abtMe";
 });
 
 $("#rockPaperScissors")
@@ -88,7 +107,7 @@ function slideDown() {
   $("#textWrp").animate(
     {
       top: "+=50px",
-      right: "-=40px",
+      right: "-=80px",
       opacity: 0,
       fontSize: "0.9rem",
       deg: 5,
@@ -100,7 +119,7 @@ function slideDown() {
   $("#textWrp").animate(
     {
       top: "+=50px",
-      right: "+=40px",
+      right: "+=80px",
       opacity: 100,
       fontSize: "1rem",
       deg: 0,
@@ -108,7 +127,7 @@ function slideDown() {
     rotator
   );
   setTimeout(() => {
-    $("h1").animate({ marginBottom: "-5px" });
+    $("h1").animate({ marginBottom: "-8px" });
   }, 900);
 }
 
@@ -116,7 +135,7 @@ function slideUp() {
   $("#textWrp").animate(
     {
       top: "-=50px",
-      right: "-=40px",
+      right: "-=80px",
       opacity: 0,
       fontSize: "0.9rem",
       deg: -5,
@@ -129,7 +148,7 @@ function slideUp() {
     $("#textWrp").animate(
       {
         top: "-=50px",
-        right: "+=40px",
+        right: "+=80px",
         opacity: 100,
         fontSize: "1rem",
         deg: 0,
@@ -146,7 +165,7 @@ function unHide() {
   $("#textWrp").animate(
     {
       top: "-=50px",
-      right: "+=40px",
+      right: "+=80px",
       opacity: 100,
       fontSize: "1rem",
       deg: 0,
