@@ -3,8 +3,8 @@ let chosen = "aboutMe";
 $("#abtMe").on("click", () => {
   $("#circle").animate({ top: "54px" }, 1000);
   setTimeout(() => {
-    $("#firstH").text("Hi, my name is Oskar - A Full-stack");
-    $("#secondH").text("web developer from poland");
+    $("#firstH").text("vsafvgrasbhaveavg");
+    $("#secondH").text("egagdadfvadva");
     $("#text").text("wafwafawfa");
   }, 915);
   slideDown();
@@ -59,8 +59,8 @@ $(window).on("load resize", () => {
 $("#trapezoid").on("click", () => {
   $("#myWork").animate({ top: "110%" }, 1000);
   $("#circle").animate({ top: "54px" }, 1000);
-  $("#firstH").text("Hi, my name is Oskar - A Full-stack");
-  $("#secondH").text("web developer from poland");
+  $("#firstH").text("vsafvgrasbhaveavg");
+  $("#secondH").text("egagdadfvadva");
   $("#text").text("wafwafawfa");
   unHide();
   chosen = "abtMe";
