@@ -68,3 +68,66 @@ $("#keeperApp")
   .on("mouseleave", () => {
     $(".ka").fadeOut(200);
   });
+
+const rotator = {
+  duration: 500,
+  step: function (now) {
+    $(this).css({ transform: "rotate(" + now + "deg)" });
+  },
+};
+
+function slideDown() {
+  $("#textWrp").animate(
+    {
+      top: "+=50px",
+      right: "-=40px",
+      opacity: 0,
+      fontSize: "0.9rem",
+      deg: 5,
+    },
+    rotator
+  );
+  $("h1").animate({ marginBottom: "20px" });
+  $("#textWrp").animate({ top: "-=100px" });
+  $("#textWrp").animate(
+    {
+      top: "+=50px",
+      right: "+=40px",
+      opacity: 100,
+      fontSize: "1rem",
+      deg: 0,
+    },
+    rotator
+  );
+  setTimeout(() => {
+    $("h1").animate({ marginBottom: "-5px" });
+  }, 900);
+}
+
+function slideUp() {
+  $("#textWrp").animate(
+    {
+      top: "-=50px",
+      right: "-=40px",
+      opacity: 0,
+      fontSize: "0.9rem",
+      deg: 5,
+    },
+    rotator
+  );
+  $("h1").animate({ marginBottom: "20px" });
+  $("#textWrp").animate({ top: "+=100px" });
+  $("#textWrp").animate(
+    {
+      top: "-=50px",
+      right: "+=40px",
+      opacity: 100,
+      fontSize: "1rem",
+      deg: 0,
+    },
+    rotator
+  );
+  setTimeout(() => {
+    $("h1").animate({ marginBottom: "-5px" });
+  }, 900);
+}

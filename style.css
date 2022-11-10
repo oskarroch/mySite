@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  margin: -8px;
+}
+
 #wrp {
   width: 100%;
   height: 100vh;
@@ -75,7 +79,8 @@ body {
   position: absolute;
   width: 550px;
   height: 200px;
-  top: 0;
+  top: 150px;
+  margin-left: 50px;
 }
 
 #myWork {
@@ -137,4 +142,7 @@ body {
 
 .card:hover {
   cursor: pointer;
+}
+
+.selector {
 }
