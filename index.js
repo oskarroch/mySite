@@ -2,20 +2,27 @@ let chosen = "aboutMe";
 
 $("#abtMe").on("click", () => {
   $("#circle").animate({ top: "54px" }, 1000);
+  slideDown();
+  chosen = "aboutMe";
 });
 
 $("#interests").on("click", () => {
   $("#circle").animate({ top: "140px" }, 1000);
-  chosen === "aboutMe" ? null : null;
+  chosen === "aboutMe" ? slideUp() : slideDown();
+  chosen = "interests";
 });
 
 $("#xp").on("click", () => {
   $("#circle").animate({ top: "226px" }, 1000);
+  slideUp();
+  chosen = "xp";
 });
 
 $("#featuredWork").on("click", () => {
   $("#circle").animate({ top: "312px" }, 1000);
   $("#myWork").animate({ top: "35%" }, 1000);
+  chosen = "work";
+  slideUp();
 });
 
 $(window).on("load resize", () => {
@@ -37,6 +44,7 @@ $(window).on("load resize", () => {
 $("#trapezoid").on("click", () => {
   $("#myWork").animate({ top: "110%" }, 1000);
   $("#circle").animate({ top: "54px" }, 1000);
+  unHide();
 });
 
 $("#rockPaperScissors")
@@ -111,12 +119,30 @@ function slideUp() {
       right: "-=40px",
       opacity: 0,
       fontSize: "0.9rem",
-      deg: 5,
+      deg: -5,
     },
     rotator
   );
   $("h1").animate({ marginBottom: "20px" });
   $("#textWrp").animate({ top: "+=100px" });
+  if (chosen != "work") {
+    $("#textWrp").animate(
+      {
+        top: "-=50px",
+        right: "+=40px",
+        opacity: 100,
+        fontSize: "1rem",
+        deg: 0,
+      },
+      rotator
+    );
+    setTimeout(() => {
+      $("h1").animate({ marginBottom: "-8px" });
+    }, 900);
+  }
+}
+
+function unHide() {
   $("#textWrp").animate(
     {
       top: "-=50px",
@@ -127,7 +153,5 @@ function slideUp() {
     },
     rotator
   );
-  setTimeout(() => {
-    $("h1").animate({ marginBottom: "-5px" });
-  }, 900);
+  $("h1").animate({ marginBottom: "-8px" });
 }
