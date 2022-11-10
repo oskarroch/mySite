@@ -1,36 +1,42 @@
 let chosen = "aboutMe";
 
 $("#abtMe").on("click", () => {
-  $("#circle").animate({ top: "54px" }, 1000);
-  setTimeout(() => {
-    $("#firstH").text("vsafvgrasbhaveavg");
-    $("#secondH").text("egagdadfvadva");
-    $("#text").text("wafwafawfa");
-  }, 915);
-  slideDown();
-  chosen = "aboutMe";
+  if (chosen != "aboutMe") {
+    $("#circle").animate({ top: "54px" }, 1000);
+    setTimeout(() => {
+      $("#firstH").text("vsafvgrasbhaveavg");
+      $("#secondH").text("egagdadfvadva");
+      $("#text").text("wafwafawfa");
+    }, 915);
+    slideDown();
+    chosen = "aboutMe";
+  }
 });
 
 $("#interests").on("click", () => {
-  $("#circle").animate({ top: "140px" }, 1000);
-  setTimeout(() => {
-    $("#firstH").text("feageagae");
-    $("#secondH").text("geageagaegae");
-    $("#text").text("geagaegeag");
-  }, 915);
-  chosen === "aboutMe" ? slideUp() : slideDown();
-  chosen = "interests";
+  if (chosen != "interests") {
+    $("#circle").animate({ top: "140px" }, 1000);
+    setTimeout(() => {
+      $("#firstH").text("feageagae");
+      $("#secondH").text("geageagaegae");
+      $("#text").text("geagaegeag");
+    }, 915);
+    chosen === "aboutMe" ? slideUp() : slideDown();
+    chosen = "interests";
+  }
 });
 
 $("#xp").on("click", () => {
-  $("#circle").animate({ top: "226px" }, 1000);
-  setTimeout(() => {
-    $("#firstH").text("dagegeag");
-    $("#secondH").text("awgragaeegfeagea");
-    $("#text").text("geageageaga");
-  }, 915);
-  slideUp();
-  chosen = "xp";
+  if (chosen != "xp") {
+    $("#circle").animate({ top: "226px" }, 1000);
+    setTimeout(() => {
+      $("#firstH").text("dagegeag");
+      $("#secondH").text("awgragaeegfeagea");
+      $("#text").text("geageageaga");
+    }, 915);
+    slideUp();
+    chosen = "xp";
+  }
 });
 
 $("#featuredWork").on("click", () => {
@@ -63,7 +69,7 @@ $("#trapezoid").on("click", () => {
   $("#secondH").text("egagdadfvadva");
   $("#text").text("wafwafawfa");
   unHide();
-  chosen = "abtMe";
+  chosen = "aboutMe";
 });
 
 $("#rockPaperScissors")
