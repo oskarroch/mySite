@@ -1,7 +1,7 @@
-let chosen = "aboutMe";
+let chosen = "abtMe";
 
-$("#abtMe").on("click", () => {
-  if (chosen != "aboutMe") {
+$("#abtMe").on("click", function () {
+  if (chosen != "abtMe") {
     $("#circle").animate({ top: "54px" }, 1000);
     setTimeout(() => {
       $("#firstH").text("vsafvgrasbhaveavg");
@@ -9,7 +9,7 @@ $("#abtMe").on("click", () => {
       $("#text").text("wafwafawfa");
     }, 915);
     slideDown();
-    chosen = "aboutMe";
+    chosen = "abtMe";
   }
 });
 
@@ -21,7 +21,7 @@ $("#interests").on("click", () => {
       $("#secondH").text("geageagaegae");
       $("#text").text("geagaegeag");
     }, 915);
-    chosen === "aboutMe" ? slideUp() : slideDown();
+    chosen === "abtMe" ? slideUp() : slideDown();
     chosen = "interests";
   }
 });
@@ -42,7 +42,7 @@ $("#xp").on("click", () => {
 $("#featuredWork").on("click", () => {
   $("#circle").animate({ top: "312px" }, 1000);
   $("#myWork").animate({ top: "35%" }, 1000);
-  chosen = "work";
+  chosen = "featuredWork";
   slideUp();
 });
 
@@ -69,7 +69,7 @@ $("#trapezoid").on("click", () => {
   $("#secondH").text("egagdadfvadva");
   $("#text").text("wafwafawfa");
   unHide();
-  chosen = "aboutMe";
+  chosen = "abtMe";
 });
 
 $("#rockPaperScissors")
@@ -150,7 +150,7 @@ function slideUp() {
   );
   $("h1").animate({ marginBottom: "20px" });
   $("#textWrp").animate({ top: "+=100px" });
-  if (chosen != "work") {
+  if (chosen != "featuredWork") {
     $("#textWrp").animate(
       {
         top: "-=50px",
