@@ -180,3 +180,11 @@ function unHide() {
   );
   $("h1").animate({ marginBottom: "-8px" });
 }
+
+function solution(str, ending) {
+  const array = str.split("");
+  const array2 = ending.split("");
+  for (let i = array2.length - 1; i > 0; i--) {
+    console.log(array2[i]);
+  }
+}
