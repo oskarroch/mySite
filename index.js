@@ -63,7 +63,7 @@ $(window).on("load resize", () => {
 });
 
 $("#trapezoid").on("click", () => {
-  $("#myWork").animate({ top: "110%" }, 1000);
+  $("#myWork").animate({ top: "+=110%" }, 1000);
   $("#circle").animate({ top: "54px" }, 1000);
   $("#firstH").text("vsafvgrasbhaveavg");
   $("#secondH").text("egagdadfvadva");
