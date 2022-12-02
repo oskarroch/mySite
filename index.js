@@ -2,16 +2,16 @@ let chosen = "abtMe";
 
 const texts = {
   aboutMe: {
-    heading: "Hi, my name is Oskar. I'm a Full-stack web developer from Poland",
-    paragraph: "",
+    heading: "geahgasrhtedahdhtasjh",
+    paragraph: "tahtdahtadhtdahtadhtadh",
   },
   interests: {
-    heading: "",
-    paragraph: "",
+    heading: "tdahdtahvdagSRH",
+    paragraph: "EShrsHgrtdagfadgadhj",
   },
   experience: {
-    heading: "",
-    paragraph: "",
+    heading: "rtdahrdahtadhdfgsahgggraesh",
+    paragraph: "ashsahrsdafsragawsgsagws",
   },
 };
 
