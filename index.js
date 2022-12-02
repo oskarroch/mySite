@@ -3,99 +3,57 @@ let chosen = "abtMe";
 const texts = {
   aboutMe: {
     heading: "Hi, my name is Oskar. I'm a Full-stack web developer from Poland",
-    paragraph: "efagaegaegdag",
+    paragraph: "",
   },
   interests: {
-    heading: "dagdadafaegf",
-    paragraph: "agdadaegeagdsa",
+    heading: "",
+    paragraph: "",
   },
   experience: {
-    heading: "gdagdadfeafdafsagae",
-    paragraph: "gageagaeegegeagea",
+    heading: "",
+    paragraph: "",
   },
 };
 
-const rotator = {
-  duration: 500,
-  step: function (now) {
-    this.style.transform = "rotate(" + now + "deg)";
-  },
-};
-
-document.getElementById("abtMe").addEventListener("click", function () {
-  if (chosen !== "abtMe") {
-    const circle = document.getElementById("circle");
-    circle.animate([{ top: circle.style.top }, { top: "54px" }], {
-      duration: 1000,
-      easing: "ease",
-      fill: "forwards",
-    });
+$("#abtMe").on("click", function () {
+  if (chosen != "abtMe") {
+    $("#circle").animate({ top: "54px" }, 1000);
     setTimeout(() => {
-      const heading = document.getElementById("heading");
-      heading.textContent = texts.aboutMe.heading;
-      const text = document.getElementById("text");
-      text.textContent = texts.aboutMe.paragraph;
+      $("#heading").text(texts.aboutMe.heading);
+      $("#text").text(texts.aboutMe.paragraph);
     }, 915);
     slideDown();
     chosen = "abtMe";
   }
 });
 
-document.getElementById("interests").addEventListener("click", function () {
-  if (chosen !== "interests") {
-    const circle = document.getElementById("circle");
-    circle.animate([{ top: circle.style.top }, { top: "140px" }], {
-      duration: 1000,
-      easing: "ease",
-      fill: "forwards",
-    });
+$("#interests").on("click", () => {
+  if (chosen != "interests") {
+    $("#circle").animate({ top: "140px" }, 1000);
     setTimeout(() => {
-      const heading = document.getElementById("heading");
-      heading.textContent = texts.interests.heading;
-      const text = document.getElementById("text");
-      text.textContent = texts.interests.paragraph;
+      $("#heading").text(texts.interests.heading);
+      $("#text").text(texts.interests.paragraph);
     }, 915);
-    if (chosen === "abtMe") {
-      slideUp();
-    } else {
-      slideDown();
-    }
+    chosen === "abtMe" ? slideUp() : slideDown();
     chosen = "interests";
   }
 });
 
-document.getElementById("xp").addEventListener("click", function () {
-  if (chosen !== "xp") {
-    const circle = document.getElementById("circle");
-    circle.animate([{ top: circle.style.top }, { top: "226px" }], {
-      duration: 1000,
-      easing: "ease",
-      fill: "forwards",
-    });
+$("#xp").on("click", () => {
+  if (chosen != "xp") {
+    $("#circle").animate({ top: "226px" }, 1000);
     setTimeout(() => {
-      const heading = document.getElementById("heading");
-      heading.textContent = texts.experience.heading;
-      const text = document.getElementById("text");
-      text.textContent = texts.experience.paragraph;
+      $("#heading").text(texts.experience.heading);
+      $("#text").text(texts.experience.paragraph);
     }, 915);
     slideUp();
     chosen = "xp";
   }
 });
 
-document.getElementById("featuredWork").addEventListener("click", function () {
-  const circle = document.getElementById("circle");
-  circle.animate([{ top: circle.style.top }, { top: "312px" }], {
-    duration: 1000,
-    easing: "ease",
-    fill: "forwards",
-  });
-  const myWork = document.getElementById("myWork");
-  myWork.animate([{ top: myWork.style.top }, { top: "35%" }], {
-    duration: 1000,
-    easing: "ease",
-    fill: "forwards",
-  });
+$("#featuredWork").on("click", () => {
+  $("#circle").animate({ top: "312px" }, 1000);
+  $("#myWork").animate({ top: "35%" }, 1000);
   chosen = "featuredWork";
   slideUp();
 });
@@ -156,6 +114,13 @@ $("#keeperApp")
   .on("mouseleave", () => {
     $(".ka").fadeOut(200);
   });
+
+const rotator = {
+  duration: 500,
+  step: function (now) {
+    $(this).css({ transform: "rotate(" + now + "deg)" });
+  },
+};
 
 function slideDown() {
   $("#textWrp").animate(
@@ -228,13 +193,3 @@ function unHide() {
   );
   $("h1").animate({ marginBottom: "-8px" });
 }
-
-const pulseElement = document.querySelector(".pulse");
-
-pulseElement.addEventListener("mouseenter", () => {
-  pulseElement.classList.add("pulse-hover");
-});
-
-pulseElement.addEventListener("mouseleave", () => {
-  pulseElement.classList.remove("pulse-hover");
-});
