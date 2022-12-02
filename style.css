@@ -13,7 +13,12 @@ h1 {
   margin: -8px;
 }
 
-#rockPaperScissors {
+#heading,
+#paragraph {
+  word-wrap: break-word;
+}
+
+#paragraph #rockPaperScissors {
   background-image: url("img/rockPaperScissors.png");
 }
 
@@ -56,7 +61,7 @@ h1 {
 
 #textWrp {
   position: absolute;
-  width: 550px;
+  width: 560px;
   height: 200px;
   top: 150px;
   margin-left: 15%;
@@ -154,4 +159,12 @@ h1 {
   #nav {
     width: 1px;
   }
+}
+
+.pulse {
+  transition: transform 0.25s;
+}
+
+.pulse-hover {
+  transform: scale(1.1);
 }
